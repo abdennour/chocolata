@@ -1,6 +1,6 @@
 {
   "name": "chocolata",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Cookies Management in the browser (document.cookie) which supports complex data structure (objects) not only Strings ",
   "main": "index.js",
   "scripts": {
