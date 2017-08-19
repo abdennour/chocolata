@@ -1,7 +1,7 @@
 {
   "name": "chocolata",
   "version": "0.0.1",
-  "description": "Still under development. It is not yet mature. Thank you for your understanding!",
+  "description": "Cookies Management in the browser (document.cookie) which supports complex data structure (objects) not only Strings ",
   "main": "index.js",
   "scripts": {
     "compile": "babel -d lib/ src/   --no-comments",
@@ -20,7 +20,11 @@
     "url": "git+https://github.com/abdennour/chocolata.git"
   },
   "keywords": [
-      "es7", "chocolata"
+    "chocolata",
+    "cookies",
+    "document",
+    "document.cookie",
+    "incognito"
   ],
   "author": "Abdennour TOUMI <http://abdennoor.com>",
   "license": "MIT",
