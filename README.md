@@ -3,7 +3,9 @@
 
 # Overview :
 
-Still under development. It is not yet mature. Thank you for your understanding!
+An Javascript Client-side API that handles adding, getting & removing cookies to/from `document.cookie`.
+
+It handles also complex data structure. Indeed, You can persist not only `String` but also `Objects` in  `document.cookie`.
 
 # Install
 
@@ -13,8 +15,50 @@ npm install chocolata --save;
 
 # Example :
 
-```js
+## NPM environment :
 
+
+```js
+import {getItem, setItem, removeItem} from 'chocolata';
+
+setItem('token', '1234');
+// document.cookie ==> "token=1234"
+setItem('otherToken', '5678')
+// document.cookie ==> "token=1234; otherToken=5678"
+
+setItem('userInfo', {
+  firstName: 'Ahmed',
+  lastName: 'Toumi',  
+});
+
+// "token=1234; otherToken=5678; userInfo={"firstName":"Ahmed","lastName":"Toumi"}"
+
+const {firstName, lastName} = getItem('userInfo');
+console.log(`Welcome back ${firstName} ${lastName} !`)
+```
+
+## Non-NPM environment:
+
+In this case you need to import the script as CDN.
+
+Also,  examples above are still valid. However , instead of `import ..` , `window.Chocolata` is the namespace of this library:
+
+```html
+<script src="https://cdn.rawgit.com/abdennour/chocolata/39513fa4/cdn/chocolata-latest.min.js"></script>
+
+<script>
+Chocolata.setItem('userInfo', {
+  firstName: 'Ahmed',
+  lastName: 'Toumi',  
+});
+
+// "token=1234; otherToken=5678; userInfo={"firstName":"Ahmed","lastName":"Toumi"}"
+
+const {firstName, lastName} = Chocolata.getItem('userInfo');
+console.log(
+  `Welcome back ${firstName} ${lastName} !`
+)
+</script>
 ```
 
 # License:
