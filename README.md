@@ -6,7 +6,7 @@
 
 # Overview :
 
-An Javascript Client-side API that handles adding, getting & removing cookies to/from `document.cookie`.
+A Javascript Client-side API that handles adding, getting & removing cookies to/from `document.cookie`.
 
 It handles also complex data structure. Indeed, You can persist not only `String` but also `Objects` in  `document.cookie`.
 
